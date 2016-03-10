@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+}
+#div1 {
+	background-color: grey;
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;	
+	width: 960px;
+}
+#div2 {
+	background-color: black;
+	color: white;
+	padding: 12px
+}
+p {
+	background-color: red;
+}
+.box-details {
+	padding: 15px 5px 15px 5px;
+}
+#first-box {
+	color: blue;
+}
+#second-box {
+	color: green;
+}
+#third-box {
+	color: yellow;
+}
