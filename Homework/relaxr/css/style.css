@@ -1,0 +1,180 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 55px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+}
+a:link {
+  text-decoration: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+  margin: auto; 
+  width: 960;
+  overflow: hidden;
+  background-color: #f0efef;
+  border-left: 
+}
+
+header {
+  overflow: auto;
+  background-color: #033048;
+  width: 100%;
+
+}
+
+aside p {
+font-size: 24px;
+}
+
+footer p {
+text-align: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header a:link{
+  color: #f9e42e;
+  font-weight: 600;
+  font-size: 24;
+}
+header a:visited {
+  color: #f9e42e;
+}
+h1 {
+  background-color: #033048;
+  color: white;
+  font-weight: 800;
+  font-size: 40px;
+  padding-top: 50px;
+  margin: 20px 0 20px 80px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+nav ul {
+  margin-right: 80px;
+}
+nav li {
+  display: inline;
+  background-color: #033048;
+  font-size: 24px;
+  font-weight: 40;
+  color: #f9e42e;
+  margin: 20px 10px 20px 0;
+}
+section {
+  width: 700px;
+  align-items: center;
+  margin: 80px 0 80px 80px;
+}
+aside {
+  width: 240px;
+  margin: 80px 80px 0 0;
+  color: #033048;
+}
+nav {
+  margin-right: 20px;
+}
+p {
+  font-size:20px;
+  font-weight: 300;
+}
+article p.text::first-letter{
+  font-size: 200%;
+  font-weight:600;
+  float: left;
+  margin: 0 0 0 0;
+}
+aside li {
+  font-size: 24px;
+  font-weight: 300;
+}
+aside a:visited {
+  color:#033048;
+}
+#lm {
+  text-align: right;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 0;
+}
+aside ul {
+  margin-bottom: 80px;
+}
+p.rdmr {
+  text-align: right;
+  font-weight: 600;
+}
+p.rdmr a:visited {
+  color: #033048;
+}
+#su {
+  background-color: #f9e42e;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 20px 0 20px 0;
+}
+#su a:link {
+  color:white;
+  background-color: #033048;
+  padding: 5px 40px 5px 40px;
+}
+#su a:visited {
+  color: white;
+}
+p.figs {
+  background-color: black;
+  color: #f9e42e;
+  font-size: 40px;
+  font-weight: 800;
+}
+footer img.center {
+  margin:auto;
+  padding: 20px  20px 20px 20px;
+}
