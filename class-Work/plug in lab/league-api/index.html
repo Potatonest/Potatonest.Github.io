@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>League API STUFF</title>
+		<!--CSS STUFF GOES HERE-->
+	</head>
+	<body>
+
+		<script src="../scripts/app.js"></script>
+		<script src="../scripts/require.js"></script>
+		<script>
+			require (['jquery'], function (){
+				var api_key = 'b9f9e282-423f-4257-9e15-0f5f39d962ab';
+				var base_url = 'https://na.api.pvp.net/';
+				var region = 'na';
+				var player_id = '';
+				var champion_ids = [];
+
+				var champion_retrieved = false;
+				var summoner_id_retrieved = false;
+				//test api
+				$.ajax({
+					url: base_url+'api/lol/'+region+'/v1.2/champion?api_key='+api_key,
+					success: function (data){
+						var champions_response = data['champions'];
+						for (var i = 0; i < champions_response.length; i++){
+							champion_ids.push(champions_response[i]['id']);
+							champion_retrieved = true;
+						}
+					}
+				})
+
+				$.ajax({
+					url: base_url+'/api/lol/'+region+'/v1.4/summoner/by-name/Maars?api_key='+api_key,
+					success: function (data){
+						player_id = data['maars']['id'];
+						summoner_id_retrieved = true;
+					}
+				});
+
+				var checker = setInterval(function (){
+					if (champion_retrieved && summoner_id_retrieved){
+						console.log
+						clearInterval(checker);
+						$.ajax({
+							url: base_url+'championmastery/location/NA1/player/'+player_id+'/champion/'+champion_ids[0]+'?api_key='+api_key,
+							success: function (data){
+								console.log(data);
+							}
+						});
+					}
+				})
+
+
+			});
+		</script>
+	</body>
+</html>
